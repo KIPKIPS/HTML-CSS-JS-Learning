@@ -7,9 +7,52 @@
     <title>Pseudo Element</title>
 </head>
 <style>
+    p {
+        font-size: 20px;
+    }
+
+    /* 伪元素,界面中一些特殊的位置 ::开头 */
+    /* 
+        ::first-letter 第一个字母
+        ::first-line 第一行
+        ::selection 选中的
+        
+        这两个需要结合属性使用
+        ::before 元素的起始位置
+        ::after 元素的末尾位置
+     */
+    p::first-letter {
+        font-size: 40px;
+    }
+
+    p::first-line {
+        font-weight: 600;
+    }
+
+    p::selection {
+        background-color: rgb(101, 101, 192);
+    }
+
+    div::before {
+        content: "abc";
+        color: blueviolet;
+        font-size: 60px;
+    }
+
+    div::after {
+        content: "xxxx";
+        color: rgb(0, 140, 255);
+        font-size: 30px;
+    }
 </style>
 
 <body>
+    <p>ffffasndkasndaksnfkasdnc askdfasljflasdfmlasnfsdanfknsdakfnsdkafnaskflsafmlasmflkdncsnfaaslfksaflksdn</p>
+    <p>sssssssss</p>
+    <p>tttttt</p>
+    <p>fourth</p>
+    <p>fifth</p>
+    <div>Hello guys</div>
 </body>
 
 </html>
