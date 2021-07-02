@@ -33,25 +33,57 @@
 
         /* 关系选择器 */
         /* 选择 div的子元素span即div直接包含的子元素 */
-        div > span{
+        div>span {
             color: rgb(255, 204, 0);
         }
-        div > .select_class > span{
+
+        div>.select_class>span {
             color: rgb(0, 132, 194);
         }
-        div > #select_id > span{
+
+        div>#select_id>span {
             color: rgb(151, 0, 93);
             font-size: 4vw;
         }
 
         /* +符号 选择下一个 h后面的h1*/
-        h + h1{
+        h+h1 {
             font-size: 3vw;
         }
+
         /* ~符号 选择后边所有的兄弟元素 */
-        div ~ p {
+        div~p {
             font-size: 5vw;
             background-color: aquamarine;
+        }
+
+        /* 属性选择器 包含title属性的p标签*/
+        p[title] {
+            font-size: 3vw;
+        }
+
+        /* 属性选择器 包含title且为xx属性的p标签*/
+        p[title=xx] {
+            font-size: 2vw;
+            background-color: rgb(40, 13, 196);
+        }
+
+        /* 属性选择器 包含title且为ab开头属性的p标签 */
+        p[title^=ab] {
+            font-size: 2vw;
+            /* background-color: rgb(255, 8, 173); */
+        }
+
+        /* 属性选择器 包含title且为d结尾属性的p标签 */
+        p[title$=d] {
+            font-size: 1vw;
+            /* background-color: rgb(255, 8, 173); */
+        }
+
+        /* 属性选择器 包含title且包含c属性的p标签 */
+        p[title*=c] {
+            font-size: 4vw;
+            /* background-color: rgb(255, 8, 173); */
         }
     </style>
 </head>
@@ -75,21 +107,14 @@
     <span>xxx</span>
     <h3>www</h3>
     <!-- 祖先元素有多个,父元素只有一个 祖先后代元素范围更大,父子元素必须是直接包含关系-->
-    <div>
-        div
-        <p> <!-- 父元素关系div p -->
-            div中的p
-            <span>div 包含 p 包含 span元素</span>
+    <div> div <p>
+            <!-- 父元素关系div p --> div中的p <span>div 包含 p 包含 span元素</span>
         </p>
         <p id="select_id">
-            <span>
-                符合id条件的
-            </span>
+            <span> 符合id条件的 </span>
         </p>
         <p class="select_class">
-            <span>
-                符合class条件的
-            </span>
+            <span> 符合class条件的 </span>
         </p>
         <!-- 兄弟元素关系p span -->
         <span>div 直接包含的 span元素</span>
@@ -101,6 +126,9 @@
         <p>div 内后面的p标签</p>
     </div>
     <p>div外后面的p标签</p>
+    <p title="abc">abc title p标签</p>
+    <p title="abcd">abcd title p标签</p>
+    <p title="xx">xx title p标签</p>
 </body>
 
 </html>

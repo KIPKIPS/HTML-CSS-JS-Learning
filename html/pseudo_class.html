@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Pseudo Class</title>
+</head>
+<style>
+    /* 伪类用来描述一个元素的特殊状态,第一个子元素,被点击的元素,鼠标移入的元素,一般:开头 */
+    /* 
+        不同类型的也会考虑排序 li
+        :first-child 第一个子元素
+        :last-child 最后一个子元素
+        :nth-child() 第几个元素
+     */
+    ul>li:first-child {
+        color: red;
+    }
+
+    ul>li:nth-child(5) {
+        /*中间填n 表示0~正无穷 2n或even表示选中偶数位 2n+1或odd表示奇数位*/
+        color: green;
+        font-size: 4vw;
+    }
+
+    /* 所有li元素的第一个 */
+    ul>li:first-of-type {
+        color: rgb(0, 38, 255);
+        background-color: aqua;
+    }
+
+    /* :not()否定伪类,将条件符合的剔除掉 */
+    /* 在li元素中 除了第三个其余都加背景 */
+    ul>li:not(li:nth-of-type(3)) {
+        /*除了第三个*/
+        background-color: rgb(255, 0, 170);
+    }
+
+    /* 表示未访问过的链接 */
+    a:link {
+        color: cornflowerblue;
+    }
+
+    /* 访问过的链接 */
+    /* 由于保护个人隐私,只允许修改颜色属性 */
+    a:visited {
+        color: darkgoldenrod;
+    }
+
+    h1:hover {
+        background-color: coral;
+    }
+
+    h2:active {
+        color: crimson;
+    }
+</style>
+
+<body>
+    <ul>
+        <span>span</span>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+    </ul>
+    <a href="https://www.baidu.com">link</a>
+    <br>
+    <a href="https://www.baidu111.com">link111</a>
+    <h1>???????????</h1>
+    <h2>点击</h2>
+</body>
+
+</html>
