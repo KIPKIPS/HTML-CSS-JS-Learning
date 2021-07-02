@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Audio</title>
+</head>
+
+<body>
+    <audio src="../audio/audio.mp3" controls autoplay loop></audio>
+    <!-- 这种写法可以播放音频是会忽视文字,若不支持则显示文字[浏览器不支持Audio标签] -->
+    <audio controls>
+        浏览器不支持Audio标签
+        <source src="../audio/audio.mp3">
+        <!-- 若不支持mp3则去寻找ogg -->
+        <source src="../audio/audio.ogg">
+        <!-- 若不支持audio标签则执行后面的 -->
+        <!-- 基本上支持所有浏览器 -->
+        <embed src="../audio/audio.mp3" type="audio/mp3" width="200px" height="50px">
+    </audio>
+
+    <!-- video和audio基本一致 -->
+    <!-- <video src=""></video> -->
+    <video>
+        <source src="">
+    </video>
+</body>
+
+</html>
