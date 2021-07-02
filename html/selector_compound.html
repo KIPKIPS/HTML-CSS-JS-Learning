@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Compound Selector</title>
+    <style>
+        /* 复合选择器 red类下的id为purple的元素*/
+        .red #purple {
+            color: rgb(255, 0, 0);
+            font-weight: 600;
+        }
+
+        /* 交集选择器 条件class为blue的div,若有元素选择器(div),则必须以元素选择器开头*/
+        div.blue {
+            color: rgb(0, 26, 255);
+            font-weight: 600;
+        }
+
+        /* 条件class为green 下的p标签 */
+        .green p {
+            color: rgba(27, 182, 0, 0.5);
+            font-weight: 600;
+            font-size: large;
+        }
+
+        /* 并集选择器,h3或者span */
+        span,
+        h3 {
+            color: rgb(255, 0, 221);
+        }
+
+        /* 关系选择器 */
+        /* 选择 div的子元素span即div直接包含的子元素 */
+        div > span{
+            color: rgb(255, 204, 0);
+        }
+        div > .select_class > span{
+            color: rgb(0, 132, 194);
+        }
+        div > #select_id > span{
+            color: rgb(151, 0, 93);
+            font-size: 4vw;
+        }
+
+        /* +符号 选择下一个 h后面的h1*/
+        h + h1{
+            font-size: 3vw;
+        }
+        /* ~符号 选择后边所有的兄弟元素 */
+        div ~ p {
+            font-size: 5vw;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">
+        <p>kipkips</p>
+        <p>发生什么事啦</p>
+        <p id="purple">杰哥这是什么啊</p>
+    </div>
+    <div class="blue">
+        <p>让我康康</p>
+        <h1>好康,是新游戏哦</h1>
+        <h2>比游戏还刺激♂</h1>
+    </div>
+    <div class="green">
+        <p>deng dua lang</p>
+        <p1>哟 你脸红啦</p1>
+    </div>
+    <p>啊这</p>
+    <span>xxx</span>
+    <h3>www</h3>
+    <!-- 祖先元素有多个,父元素只有一个 祖先后代元素范围更大,父子元素必须是直接包含关系-->
+    <div>
+        div
+        <p> <!-- 父元素关系div p -->
+            div中的p
+            <span>div 包含 p 包含 span元素</span>
+        </p>
+        <p id="select_id">
+            <span>
+                符合id条件的
+            </span>
+        </p>
+        <p class="select_class">
+            <span>
+                符合class条件的
+            </span>
+        </p>
+        <!-- 兄弟元素关系p span -->
+        <span>div 直接包含的 span元素</span>
+    </div>
+    <h></h>
+    <h1>h后面的h1</h1>
+    <div>
+        <div></div>
+        <p>div 内后面的p标签</p>
+    </div>
+    <p>div外后面的p标签</p>
+</body>
+
+</html>
