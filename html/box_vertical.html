@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Box Vertical</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 200px;
+            background-color: aqua;
+            /* 溢出区域隐藏掉 */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* 垂直方向的滚动条 */
+            /* overflow-y: scroll; */
+            overflow: auto;
+        }
+
+        .inner {
+            margin-left: 200px;
+            border: 100px solid greenyellow;
+            /*width默认会设置为auto*/
+            width: auto;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        /* 
+            inner内部元素的高度比父元素的高度大,成为溢出
+            使用overflow设置父元素如何处理溢出的子元素
+         */
+    </style>
+</head>
+
+<body>
+    <!-- border -->
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>
