@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Unit</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .box2 {
+            width: 50%;
+            height: 50%;
+            background-color: rgb(0, 195, 255);
+        }
+
+        /* em等于一个font size(默认16),相对于自身的字体大小 */
+        .box3 {
+            font-size: 20px;
+            width: 10em;
+            height: 10em;
+            background-color: rgb(43, 255, 0);
+        }
+
+        /* rem相对于根元素(html)的字体大小 */
+        html {
+            font-size: 30px;
+        }
+
+        .box4 {
+            width: 10rem;
+            height: 10rem;
+            background-color: rgb(225, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>
