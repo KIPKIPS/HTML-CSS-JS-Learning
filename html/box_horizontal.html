@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Box Horizontal</title>
+    <style>
+        .out {
+            width: 800px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .inner {
+            margin-left: 200px;
+            border: 50px solid orangered;
+            /*width默认会设置为auto*/
+            width: auto;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        /* 
+            元素在其父元素水平方向的布局由以下几个属性共同决定:
+            marigin-left
+            border-left
+            padding-left
+            width
+            padding-right
+            border-right
+            margin-right
+
+            一个元素在其父元素中的水平布局满足以下等式
+            margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素内容区的宽度(必须满足)
+            若等式不成立,成为过渡约束,需要自动调整
+            其中 width,margin-left,margin-right可以设置为auto
+            未设置auto时,自动调整margin-right来进行调整
+            设置auto时,会自动计算auto的属性
+            200 + 50 + 0 + auto + 0 + 50 + 0 = 800 => auto = 500
+
+            若width为auto,其中一个外边距也为auto,则width会为最大值,外边距一直为0
+            若三个值都为auto,width最大,两个外边距为0
+            两个外边距auto,宽度固定值,两个外边距分别为需要补齐的值 / 2
+
+            例:水平居中
+                width:xxxpx;
+                margin:0 auto; 上下边距为0 左右为auto
+         */
+    </style>
+</head>
+
+<body>
+    <!-- border -->
+    <div class="out">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>
