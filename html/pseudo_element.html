@@ -44,6 +44,14 @@
         color: rgb(0, 140, 255);
         font-size: 30px;
     }
+
+    /* 对于冲突的选择器 优先级如下 */
+    /* 
+        内联样式       1000 最优先 
+        id选择器       100          #box
+        类和伪类选择器  10           .red :class
+        元素选择器      1            div p a
+     */
 </style>
 
 <body>
