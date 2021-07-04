@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Outline Shadow</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+
+        .outline_shadow {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            /* outline描边 用法和border一样 不会影响box的最终尺寸 */
+            /* outline: 10px salmon solid; */
+            /* 阴影颜色和偏移量,不会影响布局 */
+            /* 
+                第一个值:水平偏移量
+                第二个值:垂直偏移量
+                第三个值:模糊效果 越大越模糊
+                第四个值:颜色
+             */
+            box-shadow: 10px 10px 20px rgba(0, 126, 115, 0.5);
+        }
+
+        .angle_rounded {
+            /* 圆角 */
+            width: 200px;
+            height: 50px;
+            background-color: blueviolet;
+            /* border-radius 设置圆角*/
+            /* 
+                设置半径
+                border-top-left-radius
+                border-top-right-radius
+                border-bottom-left-radius
+                border-bottom-right-radius
+                一个值为圆角矩形
+                两个值为椭圆角矩形
+                border-raduis
+                一个值 四个角
+                两个值 左上&右下 右上&左下
+                三个值 左上 右上&左下 右下
+                四个值 左上 右上 右下 左下
+             */
+            margin-top: 50px;
+            border-top-left-radius: 10px 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 40px;
+            /* border-radius: 10px; */
+        }
+
+        .button {
+            width: 200px;
+            height: 50px;
+            background-color: brown;
+            margin-top: 50px;
+            border-radius: 25px;
+            /* border-radius: 50%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline_shadow"></div>
+    <div class="angle_rounded"></div>
+    <div class="button"></div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Float</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            /* 
+                通过浮动使元素向其父元素左侧或右侧移动
+                float:
+                none 不浮动
+                left 左侧
+                right 右侧
+                float 设置移动之后 水平布局的等式 不需要满足
+
+                元素设置浮动之后会从文档流中脱离,不再占据布局的位置
+             */
+            float: left;
+        }
+
+        /* box2向上移动是因为box设置为float不再占位置了 */
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            float: left;
+        }
+
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+
+        .box6 {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            float: right;
+        }
+
+        /* 
+            1.浮动元素会完全脱离文档流,不再占据位置
+            2.设置float之后会向左侧或者右侧移动
+            3.浮动元素默认不会从父元素中移出
+            4.浮动元素左移右移时不会超过它前面的其他浮动元素
+            5.若浮动元素的上方是一个没有浮动的块元,则浮动元素无法上移 .box4
+            6.浮动元素不会超过它上边的浮动的兄弟元素,最多和前一个浮动元素一样高 .box6
+         */
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+
+</html>
