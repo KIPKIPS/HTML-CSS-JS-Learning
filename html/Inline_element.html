@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Inline Elements</title>
+    <style>
+        .inline {
+            background-color: orange;
+            /* 
+                行内元素的盒模型
+                行内元素不支持高度和宽度
+                行内元素可以设置padding 但是垂直方向的padding不会影响界面的布局
+                行内元素可以设置border 垂直方向的border不会影响界面的布局
+                行内元素可以设置margin 垂直方向的margin不会影响界面的布局
+             */
+            /* padding: 100px; */
+            border: 100px solid purple;
+            margin: 100px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 100px;
+        }
+
+        a {
+            background-color: coral;
+            /* 
+                display设置元素的盒模型类型 
+                inline 行内元素 
+                block 块元素
+                inline-block 行内块元素 保留了块元素可以设置宽高的属性和行内元素不会独占一行的特性
+                table 表格
+                none 元素不会在界面中显示,位置占用也不会生效
+            */
+            display: block;
+            /* 
+                visibility:设置元素到的显示状态
+                visible 不会隐藏 默认值
+                hidden 隐藏不显示,但是位置还是会占用
+             */
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:">超链接</a>
+    <span class="inline">span</span>
+    <div class="box"></div>
+</body>
+
+</html>
