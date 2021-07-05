@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <title>Position</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
+        
+        body {
             height: 3000px;
         }
-        p{
-            margin:auto;
+        
+        p {
+            margin: auto;
             padding: 0;
             line-height: 100px;
             vertical-align: middle;
@@ -29,7 +31,8 @@
             overflow:hidden;
             position:relative;
         } */
-        .box1{
+        
+        .box1 {
             width: 100px;
             height: 100px;
             background-color: #bfa;
@@ -64,7 +67,8 @@
                 当粘滞定位和相对定位特性基本一致
                 当元素到达某个位置时 将位置固定
         */
-        .box2{
+        
+        .box2 {
             width: 100px;
             height: 100px;
             background-color: orange;
@@ -72,12 +76,14 @@
             left: 100px;
             top: -100px;
         }
-        .box3{
+        
+        .box3 {
             width: 100px;
             height: 100px;
             background-color: yellow;
         }
-        .box4{
+        
+        .box4 {
             width: 100px;
             height: 100px;
             background-color: powderblue;
@@ -85,26 +91,29 @@
             position: absolute;
             /* 相对于root,因为box2不是祖先元素,所以开启了定位也没有作为参考物 */
             left: 20px;
-            top:20px;
+            top: 20px;
         }
         /* box4脱离文档流,box5位置上移 */
-        .box5{
+        
+        .box5 {
             width: 100px;
             height: 100px;
             background-color: purple;
         }
-        .box6{
+        
+        .box6 {
             width: 100px;
             height: 100px;
-            background-color:royalblue;
+            background-color: royalblue;
             position: fixed;
             top: 0px;
             right: 0px;
         }
-        .box7{
+        
+        .box7 {
             width: 100px;
             height: 100px;
-            background-color:khaki;
+            background-color: khaki;
             position: sticky;
             left: 100px;
             top: 100px;
@@ -112,14 +121,29 @@
     </style>
 </head>
 <!-- 高度塌陷的解决方案 -->
+
 <body>
-    <div class="box1"><p>1</p></div>
-    <div class="box2"><p>relative</p></div>
-    <div class="box3"><p>3</p></div>
-    <div class="box4"><p>absolute</p></div>
-    <div class="box5"><p>5</p></div>
-    <div class="box6"><p>fixed</p></div>
-    <div class="box7"><p>sticky</p></div>
+    <div class="box1">
+        <p>1</p>
+    </div>
+    <div class="box2">
+        <p>relative</p>
+    </div>
+    <div class="box3">
+        <p>3</p>
+    </div>
+    <div class="box4">
+        <p>absolute</p>
+    </div>
+    <div class="box5">
+        <p>5</p>
+    </div>
+    <div class="box6">
+        <p>fixed</p>
+    </div>
+    <div class="box7">
+        <p>sticky</p>
+    </div>
 </body>
 
 </html>

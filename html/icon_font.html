@@ -10,12 +10,58 @@
     <style>
         /* 使用图片来引入图标,占用空间和灵活性都受限 */
         /* 使用图标字体来处理 */
+        
+        .fab {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-left: 20px;
+        }
+        
+        li>.fas {
+            font-size: 20px;
+        }
+        
+        li::before {
+            content: "\f1b0";
+            font-family: 'Font Awesome 5 Pro';
+            font-size: 20px;
+            color: rgb(26, 121, 42);
+            font-weight: 900;
+        }
+        
+        li>a {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(26, 121, 42);
+            /* 
+                font的简写属性
+                字体大小/行高 字体族 (必填项)
+                font-weight bold(加粗)/normal等 ,100 - 900九个级别
+                font-style normal/italic(斜体)等
+            */
+            font: bold italic 20px/1.5 'Segoe UI', Tahoma;
+        }
     </style>
 
 </head>
 
 <body>
-    <i class="fab fa-500px" style="font-size: 30px;"></i>
+    <i class="fab fa-500px"></i>
+    <ul class="list">
+        <li>
+            <a>我最后的轻语是奶酪的霉菌</a>
+        </li>
+        <li>
+            <a>梅贾的窃魂券</a>
+        </li>
+        <li>
+            <a>2019-2020</a>
+        </li>
+    </ul>
+    <!-- 实体的用法 -->
+    <span class="fab">&#xf36c</span>
 </body>
 
 </html>
