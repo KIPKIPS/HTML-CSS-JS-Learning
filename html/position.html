@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 3000px;
+        }
+        p{
+            margin:auto;
+            padding: 0;
+            line-height: 100px;
+            vertical-align: middle;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            /* display: inline-block; */
+            text-align: center;
+            
+        }
+        /* div{
+            vertical-align:middle;
+            display:table-cell;
+            text-align:center;
+            overflow:hidden;
+            position:relative;
+        } */
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+        /* position 定位 */
+        /* 
+            定位 默认是static元素时静止的,没有开启定位
+            relative 开启相对定位
+            absolute 绝对定位
+            fixed 固定定位
+            sticky 粘滞定位
+
+            1.relative:相对定位
+                不设置偏移量[元素]不会发生任何变化
+                参照元素在文档流的锚点位置来进行偏移
+                相对定位会提高元素的层级
+                相对定位不会脱离文档流,不会改变元素性质
+                left top right bottom
+                top和bottom left和right通常只使用其中之一
+            2.absolute:绝对定位
+                不设置偏移量[元素的位置]不会发生任何变化
+                绝对定位使得元素脱离文档流,改变元素性质 行内->块 块的宽高被内容撑开
+                绝对定位会提高元素的层级
+                偏移参考坐标系相对于包含块的来进行定位
+                    包含块:(containing block)
+                        正常情况下包含块就是元素最近的祖先块元素
+                        开启绝对定位的元素包含块离他最近的开启了定位的祖先元素,若都没开启则为根元素
+            3.fixed:固定定位
+                也是一种绝对定位
+                固定定位永远参考浏览器视口
+            4.sticky:粘滞定位
+                当粘滞定位和相对定位特性基本一致
+                当元素到达某个位置时 将位置固定
+        */
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: relative;
+            left: 100px;
+            top: -100px;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: powderblue;
+            /* 开启的绝对定位,脱离文档流 */
+            position: absolute;
+            /* 相对于root,因为box2不是祖先元素,所以开启了定位也没有作为参考物 */
+            left: 20px;
+            top:20px;
+        }
+        /* box4脱离文档流,box5位置上移 */
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box6{
+            width: 100px;
+            height: 100px;
+            background-color:royalblue;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+        .box7{
+            width: 100px;
+            height: 100px;
+            background-color:khaki;
+            position: sticky;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<!-- 高度塌陷的解决方案 -->
+<body>
+    <div class="box1"><p>1</p></div>
+    <div class="box2"><p>relative</p></div>
+    <div class="box3"><p>3</p></div>
+    <div class="box4"><p>absolute</p></div>
+    <div class="box5"><p>5</p></div>
+    <div class="box6"><p>fixed</p></div>
+    <div class="box7"><p>sticky</p></div>
+</body>
+
+</html>
