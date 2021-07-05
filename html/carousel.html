@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .img-list {
+            width: 600px;
+            height: 450px;
+            margin: 100px auto;
+            position: relative;
+        }
+        
+        .img-list li {
+            position: absolute;
+        }
+        
+        img {
+            width: 600px;
+            height: 450px;
+        }
+        /* 修改元素层级 */
+        
+        .img-list li:nth-child(3) {
+            z-index: 1;
+        }
+        /* 导航点的样式 */
+        
+        .point {
+            position: absolute;
+            z-index: 10;
+            bottom: 10px;
+            left: 5px;
+        }
+        
+        .point a {
+            width: 15px;
+            height: 15px;
+            float: left;
+            background-color: rgba(255, 255, 255, .6);
+            border-radius: 50%;
+            margin-left: 5px;
+            /* 将背景颜色只设置到内容区,边框和内边距不再有背景颜色 */
+            background-clip: content-box;
+            border: 3px solid transparent;
+        }
+        
+        .point a.active {
+            background-color: white;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .point a:hover {
+            background-color: white;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="img-list">
+        <li>
+            <a href="javascript:;"><img src="../images/beige.png" alt=""></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="../images/blue.png" alt=""></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="../images/red.png" alt=""></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="../images/yellow.png" alt=""></a>
+        </li>
+        <div class="point">
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+</body>
+
+</html>
