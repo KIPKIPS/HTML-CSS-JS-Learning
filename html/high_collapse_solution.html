@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>High Collapse Solution</title>
+    <style>
+        .box1{
+            border: red 10px solid;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+        }
+        /* solution 1 */
+        /* box不受浮动元素的影响,位置会被浮动元素box2挤到box2下面的位置 */
+        /* .box3{
+            clear: both;
+        } */
+
+        /* solution 2 */
+        /* 在box1的元素末尾after位置添加了一个元素,不受浮动元素影响 */
+        .box1::after{
+            clear: both;
+            display: block;
+            content: "";
+        }
+    </style>
+</head>
+<!-- 高度塌陷的解决方案 -->
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+
+</html>
