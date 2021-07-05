@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Font</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* 将服务器的字体提供给用户使用 */
+        /* 字体属于矢量图,不会失真 */
+        
+        @font-face {
+            font-family: 'private_font';
+            /* 服务器存储字体的路径 */
+            src: url('../font/private_font.ttf') format("truetype");
+        }
+        
+        p {
+            font-family: private_font, Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>我们所度过的每一个平凡的日常，也许都是连续发生的奇迹。</p>
+    <p>Hello hello testing</p>
+    <p>私たちが過ごした毎日が、すべて奇跡の連続だということ可能性だってある。</p>
+    <p>123</p>
+</body>
+
+</html>
