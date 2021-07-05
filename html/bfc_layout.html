@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>BFC Layout</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* float:left; */
+            overflow: hidden;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            /* 设置overflow之后开启了BFC,元素将不会被浮动元素所遮盖 */
+            overflow: hidden;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+
+</html>
