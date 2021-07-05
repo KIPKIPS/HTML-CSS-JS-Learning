@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Simple Website Layout</title>
+    <style>
+        header,main,footer{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        header{
+            height: 150px;
+            background-color: silver;
+            
+        }
+        main{
+            height: 500px;
+            background-color: #bfa;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        footer{
+            height: 200px;
+            background-color: tomato;
+        }
+        nav,article,aside{
+            float: left;
+            height: 100%;
+        }
+        nav{
+            width: 200px;
+            background-color: yellowgreen;
+        }
+        article{
+            width: 580px;
+            background-color:aqua;
+            margin: 0 10px;
+        }
+        aside{
+            width: 200px;
+            background-color: blueviolet;
+        }
+        /* 
+            高度塌陷问题: 
+                在浮动布局中,父元素的高度默认是被子元素撑开的,当子元素浮动后,会完全脱离文档流,将会
+                导致无法撑起父元素的高度,导致父元素高度的丢失
+            父元素高度丢失后,其下的子元素会自动上移,导致界面布局的混乱
+            所以高度塌陷是浮动布局中一个比较常见的问题,必须进行处理
+        */
+        /* 
+            BFC(Block Formatting Context)块级格式化环境
+            -BFC是css中的一个隐含属性,可以为一个元素开启BFC
+            开启BFC的远胜于会变成一个独立的布局区域
+
+            元素开启BFC之后的特点:
+            1.开启BFC之后元素不会被浮动元素覆盖
+            2.开启BFC之后元素子元素和父元素外边距不会重叠
+            3.开启BFC之后元素可以包含浮动的子元素
+
+            需要通过特殊的方式开启BFC
+            为元素设置overflow:hidden开启BFC 使其可以包含浮动子元素
+        */
+    </style>
+</head>
+
+<body>
+    <!-- head -->
+    <header></header>
+    <!-- main 主体 -->
+    <main>
+        <!-- 左导航栏 -->
+        <nav></nav>
+        <!-- 内容 -->
+        <article>
+        </article>
+        <!-- 右边栏 -->
+        <aside></aside>
+    </main>
+    <!-- footer -->
+    <footer></footer>
+</body>
+
+</html>
