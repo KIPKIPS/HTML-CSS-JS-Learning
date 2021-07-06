@@ -10,20 +10,19 @@
     <style>
         /* 使用图片来引入图标,占用空间和灵活性都受限 */
         /* 使用图标字体来处理 */
-        
         .fab {
             font-size: 50px;
             margin-bottom: 20px;
         }
-        
+
         li {
             margin-left: 20px;
         }
-        
+
         li>.fas {
             font-size: 20px;
         }
-        
+
         li::before {
             content: "\f1b0";
             font-family: 'Font Awesome 5 Pro';
@@ -31,7 +30,7 @@
             color: rgb(26, 121, 42);
             font-weight: 900;
         }
-        
+
         li>a {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: rgb(26, 121, 42);
@@ -49,10 +48,23 @@
                 middle 居中对齐
             */
             vertical-align: baseline;
-            text-decoration: underline 2px rgb(26, 121, 42);
+            text-decoration: underline 2px rgb(26, 121, 42) dotted;
+        }
+
+        /* 
+            white-space 如何处理换行
+            normal 正常
+            nowrap 不换行
+            per 保留空白
+        */
+        /* 可以实现超出的文本显示... */
+        .last_whisper {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 200px;
+            text-overflow: ellipsis;
         }
     </style>
-
 </head>
 
 <body>
@@ -70,6 +82,10 @@
     </ul>
     <!-- 实体的用法 -->
     <span class="fab">&#xf36c</span>
+    <div class="last_whisper">
+        “看来传说和神话总喜欢用‘很久很久以前’，这似乎是个古老的咒语，能把人从纷乱城市里拉到柔软温柔的床上，把思绪拉到关于龙和魔法，国王与皇后的那段被镶嵌在壁画上的时刻。充满骑士精神的年轻国王，召集了他最忠心勇敢的五位勇士，决定率领他们去将徘徊在边境的恶龙杀死。正当国王准备出征的时候，
+        天使从蜂蜜色的天空中出现。她带着一把锋利的宝剑，叮嘱国王，只有这把宝剑才能杀死恶龙。屠龙的旅途遥远而布满荆棘，当国王与五位勇士到达恶龙的洞穴时，他们已经气喘吁吁，遍体鳞伤。恶龙从嘴里吐出最恶毒的火焰，国王和勇士们奋力战斗。可是，勇士们却在不断的死去，一个、两个、三个、四个……正当恶龙正要将第五位勇士吞入的时候，天使赐予的宝剑突然放出耀眼夺目的金光！国王不顾自己全身的伤痛，奋力举起剑，把宝剑刺进恶龙的心脏！‘愚蠢的屠龙人啊……’恶龙奄奄一息，说出了它最后的诅咒:‘我诅咒你的臣民都要变成脆弱的饼干……永远封存在饼干罐里……直到被选中的那个年轻人打开饼干罐封印才会被解开……’所以这罐饼干真的不是我吃的我说什么你都不信咯？”
+    </div>
 </body>
 
 </html>
