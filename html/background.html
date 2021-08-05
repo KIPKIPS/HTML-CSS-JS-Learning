@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Background -P89</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            /* 可以同时设置背景颜色和背景图片 */
+            background-color: orange;
+            background-image: url(../images/blue.png);
+            /* 背景图片的重复方式 
+                repeat:重复,默认值
+                repeat-x:只沿x方向重复 -y:y方向
+                no-repeat:不重复
+            */
+            background-repeat: no-repeat;
+            /* 图片位置:九宫格位置 */
+            /* background-position: top right; */
+            /* background-position: center center; */
+            /* 偏移量 */
+            background-position: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>
