@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <title>Background -P89</title>
     <style>
-        .box1{
+        .box1 {
             width: 500px;
             height: 500px;
             /* 可以同时设置背景颜色和背景图片 */
@@ -23,6 +23,13 @@
             /* background-position: center center; */
             /* 偏移量 */
             background-position: 10px 10px;
+            /* 背景的范围 */
+            /* 
+                border-box:背景会出现在边框的下边
+                padding-box:背景不会出现在边框,只会在内容区和内边距
+                content-box:背景只会出现在内容区,边框和内边距不会出现
+            */
+            background-clip: border-box;
         }
     </style>
 </head>
