@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6032b1a4-fb09-47eb-8edb-3cbe276f4a9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/html/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/background.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/icon_font.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/icon_font.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/html/icon_font.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/html/background.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/html/background.html" />
+      <option value="$PROJECT_DIR$/html/icon_font.html" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1wLhRLwEhybf1wmdb46MzCvH6Bt" />
@@ -39,7 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1628243769493</updated>
       <workItem from="1628243775003" duration="157000" />
-      <workItem from="1629172121529" duration="8954000" />
+      <workItem from="1629172121529" duration="10216000" />
+      <workItem from="1629708061960" duration="1646000" />
     </task>
     <servers />
   </component>
