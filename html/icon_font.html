@@ -60,8 +60,10 @@
         /* 可以实现超出的文本显示... */
         .last_whisper {
             white-space: nowrap;
-            overflow: hidden;
+            /*overflow: hidden;*/
+            overflow-y:scroll;
             width: 200px;
+            height:200px;
             text-overflow: ellipsis;
         }
     </style>
