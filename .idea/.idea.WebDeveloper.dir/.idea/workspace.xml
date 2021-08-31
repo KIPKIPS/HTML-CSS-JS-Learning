@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6032b1a4-fb09-47eb-8edb-3cbe276f4a9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/form_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/form_menu_target.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,15 +30,20 @@
       <option value="$PROJECT_DIR$/html/background.html" />
       <option value="$PROJECT_DIR$/html/icon_font.html" />
       <option value="$PROJECT_DIR$/html/table.html" />
+      <option value="$PROJECT_DIR$/html/form_menu_target.html" />
+      <option value="$PROJECT_DIR$/html/form_menu.html" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1wLhRLwEhybf1wmdb46MzCvH6Bt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -56,6 +63,7 @@
       <workItem from="1629172121529" duration="10216000" />
       <workItem from="1629708061960" duration="1646000" />
       <workItem from="1630067596925" duration="1605000" />
+      <workItem from="1630404906354" duration="2749000" />
     </task>
     <servers />
   </component>
@@ -74,8 +82,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

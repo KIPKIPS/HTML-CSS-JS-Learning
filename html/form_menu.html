@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="form_menu" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>表单</title>
+    <style>
+        .box1{
+            border: red 10px solid;
+        }
+
+    </style>
+</head>
+<!-- 高度塌陷的解决方案 -->
+<body>
+    <!--action表示处理表单数据的服务器-->
+    <form action="form_menu_target.html">
+        <!--添加表单项-->
+        用户名<input type="text" name="username">
+        <br><br>
+        密码<input type="password" name="password">
+        <br><br>
+        <input type="submit" value="登录">
+        <br><br>
+        单选按钮<input type="radio" name="habit" value="on">
+        <!--checked将单选按钮设置为默认选中-->
+        <input type="radio" name="habit" value="off">
+        <br><br>
+        多选按钮<input type="checkbox" name="sex" value="man">
+        <input type="checkbox" name="sex" value="woman">
+        <br><br>
+        下拉列表
+        <select name="type_select">
+            <option value="1">选项1</option>
+            <!--selected默认选中-->
+            <option value="2">选项2</option>
+            <option value="3">选项3</option>
+        </select>
+        <br><br>
+        <input type="button" name="按钮">
+        <br><br>
+        重置按钮<input type="reset" name="重置">
+        <br><br>
+        <button type="submit">提交按钮</button>
+        <br><br>
+        颜色选择<input type="color">
+        <br><br>
+        email<input type="email"><br><br>
+        <input type="text" name="a" autocomplete="off"><br><br>
+        <input type="text" name="b"><br><br>
+        <input type="text" name="c"><br><br>
+    </form>
+</body>
+
+</html>
