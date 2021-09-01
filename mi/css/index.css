@@ -1,47 +1,142 @@
 ﻿/*主页index.html样式表*/
 
 /*顶部导航条的容器*/
-.topbar-wrapper{
+.topbar-wrapper {
     width: 100%;
-    background-color:#333;
-    height:40px;
+    background-color: #333;
+    height: 40px;
     line-height: 40px;
 }
+
 /*超链接颜色*/
-.topbar a{
+.topbar a {
     font-size: 12px;
     color: #b0b0b0;
     display: block;
 }
+
 .topbar a:hover {
     color: #fff;
 }
-.topbar .line{
-    color:#424242;
-    font-size:12px;
+
+.topbar .line {
+    color: #424242;
+    font-size: 12px;
     margin: 0 8px;
     margin-top: -1px;
 }
+
 /*左侧导航栏*/
-.servers,.topbar-wrapper li{
+.servers, .topbar-wrapper li {
     float: left;
 }
-.user-info,.shop-cart{
+
+.user-info, .shop-cart {
     float: right;
 }
-.shop-cart{
+
+.shop-cart {
     margin-left: 25px;
 }
+
 /*购物车*/
-.shop-cart a{
+.shop-cart a {
     width: 120px;
     background-color: #424242;
     text-align: center;
 }
-.shop-cart i{
+
+.shop-cart i {
     margin-right: 2px;
 }
-.shop-cart:hover a{
-    background-color:#fff;
-    color:#ff6700;
+
+.shop-cart:hover a {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+/*小米商城app*/
+.app .qrcode img {
+    width: 90px;
+    height: 90px;
+    margin: 17px;
+}
+
+.app .qrcode{
+    display:block;
+    overflow: hidden;
+    width: 124px;
+    /*height:148px;*/
+    height: 0;
+    background-color: white;
+    line-height: 1px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position:absolute;
+    left: -40px;
+    /*过渡效果*/
+    transition:height 0.2s;
+}
+
+.app .qrcode span{
+    color: black;
+    font-size: 14px;
+}
+.app{
+    position:relative;
+}
+/*app下的小三角形*/
+/*.app-wrapper:hover> .app::after{*/
+.app::after{
+    /*display: none;*/
+    content:'';
+    display:none;
+    position:absolute;
+    /*overflow:hidden;*/
+    width:0px;
+    height:0;
+    border:6px solid transparent;
+    border-top: none;
+    /*line-height:1px;*/
+    border-bottom-color: white;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    margin: auto;
+}
+
+/*.app-wrapper:hover>.app .qrcode{*/
+.app:hover .qrcode,.app:hover::after{
+    display:block;
+    height: 148px;
+}
+.shop-cart{
+    position:relative;
+}
+.shop-cart .shop-box span{
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    line-height:120px;
+}
+
+/*购物车下拉框*/
+.shop-cart .shop-box{
+    display:block;
+    overflow: hidden;
+    width: 350px;
+    /*height:148px;*/
+    height: 0px;
+    background-color: white;
+    line-height: 1px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position:absolute;
+    right: 19px;
+    /*过渡效果*/
+    transition:height 0.2s;
+}
+
+.shop-cart:hover .shop-box{
+    height: 120px;
 }
