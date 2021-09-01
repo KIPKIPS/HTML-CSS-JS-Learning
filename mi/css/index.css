@@ -3,7 +3,7 @@
 /*顶部导航条的容器*/
 .topbar-wrapper{
     width: 100%;
-    background-color:#333333;
+    background-color:#333;
     height:40px;
     line-height: 40px;
 }
@@ -13,10 +13,35 @@
     color: #b0b0b0;
     display: block;
 }
+.topbar a:hover {
+    color: #fff;
+}
+.topbar .line{
+    color:#424242;
+    font-size:12px;
+    margin: 0 8px;
+    margin-top: -1px;
+}
 /*左侧导航栏*/
 .servers,.topbar-wrapper li{
     float: left;
 }
-.shop-car,.user-info{
+.user-info,.shop-cart{
     float: right;
+}
+.shop-cart{
+    margin-left: 25px;
+}
+/*购物车*/
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+.shop-cart i{
+    margin-right: 2px;
+}
+.shop-cart:hover a{
+    background-color:#fff;
+    color:#ff6700;
 }
