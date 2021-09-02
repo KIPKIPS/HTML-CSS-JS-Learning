@@ -230,6 +230,46 @@
     float: left;
 }
 
+
+/* 设置左侧导航条样式 */
+
+.left-menu {
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 999;
+    left: -120px;
+    line-height: 1;
+}
+
+ul.left-menu li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+    margin-right: 0px;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+ul.left-menu li a:hover {
+    color: white;
+    background-color: #ff6700;
+}
+
+.left-menu a i {
+    float: right;
+    /* margin-top: 12px; */
+    line-height: 42px;
+}
+
+.all-goods-wrapper {
+    position: relative;
+    /* background-color: red; */
+}
+
 .nav-wrapper li a {
     font-size: 16px;
     margin-right: 20px;
@@ -255,7 +295,7 @@
     left: 0px;
     position: absolute;
     transition: height 0.3s;
-    z-index: 999;
+    z-index: 9999;
 }
 
 
