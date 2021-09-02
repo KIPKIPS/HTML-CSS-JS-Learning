@@ -140,3 +140,39 @@
 .shop-cart:hover .shop-box{
     height: 120px;
 }
+.header{
+    height: 100px;
+}
+.header .logo{
+    float: left;
+    margin-top:22.5px;
+    position: relative;
+    width:55px;
+    height: 55px;
+    overflow: hidden;
+    /* 隐藏文本 */
+    text-indent: -999px;
+}
+.header .logo a {
+    width:55px;
+    height: 55px;
+    display: block;
+    /* background-color: red; */
+    background-image:url("../img/mi.png");
+    background-position: center;
+    position: absolute;
+    left: 0;
+    transition:left 0.3s;
+}
+.header .logo .home {
+    left: -55px;
+}
+.header .logo:hover .mi{
+    left:55px;
+}
+.header .logo:hover .home{
+    left:0px;
+}
+.header .logo .home{
+    background-image:url("../img/home.png");
+}
