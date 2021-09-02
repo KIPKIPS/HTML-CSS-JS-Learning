@@ -157,7 +157,7 @@
     width:55px;
     height: 55px;
     display: block;
-    /* background-color: red; */
+    background-color: #ff6700;
     background-image:url("../img/mi.png");
     background-position: center;
     position: absolute;
@@ -175,4 +175,56 @@
 }
 .header .logo .home{
     background-image:url("../img/home.png");
+}
+
+/* 中间导航条 */
+.header .nav-wrapper{
+    float:left;
+    margin-left: 7px;
+}
+.header .nav{
+    /* width:850px; */
+    /* background-color: aqua; */
+    height: 100px;
+    line-height: 100px;
+    /* margin-left: 58px; */
+    padding-left: 58px;
+}
+.nav-wrapper li{
+    float:left;
+}
+
+.nav-wrapper li a{
+    font-size: 16px;
+    margin-right: 20px;
+    /* 转换成块元素,可以撑开内容区,hover */
+    display: block;
+}
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+.all-goods{
+    visibility: hidden;
+}
+.nav .goods-info{
+    /* height: 228px; */
+    height:0px;
+    overflow: hidden;
+    width:100%;
+    /* background-color: aquamarine; */
+    top: 140px;
+    left: 0px;
+    position: absolute;
+    transition:height 0.3s;
+    z-index: 999;
+}
+
+/* 选择.nav li后面的所有goods-info
+用~ 不能用+ +表示相邻的,结构上.nav li和goods-info不相邻
+*/
+.nav .show-goods:hover ~.goods-info,
+.goods-info:hover{
+    height: 228px;
+    border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 4px 2px rgba(0,0,0,0.1);
 }
