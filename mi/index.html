@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>小米商城 - 小米11 Ultra、Redmi K40 Pro、MIX FOLD，小米电视官方网站</title>
@@ -9,6 +10,7 @@
     <!--引入公共样式表-->
     <link rel="stylesheet" href="./css/base.css">
 </head>
+
 <body>
     <!--顶部导航条-->
     <!--顶部导航条外部容器-->
@@ -52,13 +54,14 @@
                 <li class="line">|</li>
             </ul>
             <ul class="shop-cart">
-                <li><a href="javascript:;">
-                    <i class="fas fa-shopping-cart"></i>
-                    购物车(0)
-                    <div class="shop-box">
-                        <span>购物车中还没有商品,赶紧选购吧!</span>
-                    </div>
-                </a></li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fas fa-shopping-cart"></i> 购物车(0)
+                        <div class="shop-box">
+                            <span>购物车中还没有商品,赶紧选购吧!</span>
+                        </div>
+                    </a>
+                </li>
                 <li class="line">|</li>
             </ul>
             <ul class="user-info">
@@ -76,13 +79,52 @@
         <div class="header w clearfix">
             <h1 class="logo">
                 <a class='mi' href="/" title='小米'></a>
+                小米官网
                 <a class='home' href="/"></a>
             </h1>
             <!-- 导航条 -->
             <div class="nav-wrapper">
                 <!-- 创建导航条 -->
                 <ul class="nav clearfix">
-                    <li class="show-goods"><a class='all-goods' href="javascript:;">全部商品分类</a></li>
+                    <li>
+                        <a class='all-goods' href="javascript:;">全部商品分类</a>
+                        <!-- 创建左侧导航菜单 -->
+                        <ul class="left-menu">
+                            <li>
+                                <a href="javascript:;">
+                                    手机
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">电视
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">笔记本 平板
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">家电
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">出行 穿戴
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">智能 路由器
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">健康 儿童
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">耳机 音响
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">电源 配件
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="javascript:;">生活 箱包
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="show-goods"><a href="javascript:;">小米手机</a></li>
                     <li class="show-goods"><a href="javascript:;">RedMi 红米</a></li>
                     <li class="show-goods"><a href="javascript:;">电视</a></li>
@@ -98,8 +140,17 @@
                     </div>
                 </ul>
             </div>
+            <!-- 搜索框容器 -->
+            <div class="search-wrapper">
+                <form class="search" action="#">
+                    <input class="search-inp" type="text">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
-
 </body>
+
 </html>
