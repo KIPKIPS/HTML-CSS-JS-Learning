@@ -290,7 +290,7 @@ ul.left-menu li a:hover {
     height: 0px;
     overflow: hidden;
     width: 100%;
-    /* background-color: aquamarine; */
+    background-color: white;
     top: 140px;
     left: 0px;
     position: absolute;
@@ -355,4 +355,79 @@ ul.left-menu li a:hover {
     background-color: #ff6700;
     color: white;
     border: none;
+}
+
+
+/* 轮播图 */
+
+.banner {
+    position: relative;
+    height: 460px;
+}
+
+.banner .img-list li {
+    position: absolute;
+}
+
+.banner img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/* 导航点 */
+
+.pointer {
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+
+.pointer a {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px rgba(255, 255, 255, 0.4) solid;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+.pointer a:hover,
+.pointer a.active {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* 箭头 */
+
+.prev-next a {
+    width: 41px;
+    height: 69px;
+    background-color: red;
+    position: absolute;
+    /* line-height: 460px; */
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: url(../img/icon-slides.png);
+}
+
+.prev-next .prev {
+    left: 234px;
+    background-position: -84px 0;
+}
+
+.prev-next .next {
+    right: 0;
+    background-position: -125px 0;
+}
+
+.prev-next .prev:hover {
+    background-position: 0 0;
+}
+
+.prev-next .next:hover {
+    background-position: -42px 0;
 }
