@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box1 {
+        width: 800px;
+        height: 800px;
+        background-color: silver;
+        overflow: hidden;
+    }
+    
+    .box1 div {
+        margin-bottom: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: #bfa;
+        margin-left: 0px;
+    }
+    
+    .box2 {
+        background-color: #bfa;
+        /* transition: all 0.3s; */
+        /* 过渡*/
+        /* transition-property 指定执行过渡的属性*/
+        /* 多属性用,隔开,所有属性用all,必须是一个有效数值向另一个有效数值过渡 */
+        /* transition-property: width, height; */
+        transition-property: all;
+        /* transition-duration 指定执行过渡的时间 秒s和毫秒ms*/
+        transition-duration: 3s;
+        /* transition-timing-function 过渡的时序函数 */
+        transition-timing-function: ease-in-out;
+        /* transition-delay */
+    }
+    
+    .box3 {
+        background-color: orange;
+        margin-left: 0px;
+        transition-property: all;
+        transition-duration: 3s;
+        transition-timing-function: linear;
+    }
+    
+    .box1:hover div {
+        /* width: 200px;
+        height: 200px;
+        background-color: orange; */
+        margin-left: 700px;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>
