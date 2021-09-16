@@ -11,7 +11,7 @@
             height: 500px;
             /* 可以同时设置背景颜色和背景图片 */
             /*background-color: orange;*/
-            /*background-image: url(../images/blue.png);*/
+            /*background-image: url(../images/bg/blue.png);*/
             /* 背景图片的重复方式 
                 repeat:重复,默认值
                 repeat-x:只沿x方向重复 -y:y方向
@@ -36,9 +36,8 @@
                 padding-box 背景图片的原点在内边距,同上
             */
             /*background-origin: padding-box;*/
-            
         }
-
+        
         .box1 {
             /*渐变*/
             /*background-image: linear-gradient(to right, red,yellow);!*线性渐变*!*/
@@ -48,26 +47,29 @@
             /*background-image: repeating-linear-gradient(red 10px,yellow 20px,green 30px);!*线性渐变*!*/
             /*background-image: radial-gradient(red 100px,yellow 200px,green 300px);!*线性渐变*!*/
             /*background-image: radial-gradient(red ,yellow);!*线性渐变*!*/
-            background-image: radial-gradient(100px 100px at 0 0,red ,#bfa);/*线性渐变*/
+            background-image: radial-gradient(100px 100px at 0 0, red, #bfa);
+            /*线性渐变*/
         }
-
+        
         .box3 {
             width: 100px;
             height: 100px;
-            background-image: url(../images/yellow.png);
+            background-image: url(../images/bg/yellow.png);
         }
+        
         .box3:hover {
-            background-image: url(../images/beige.png);
+            background-image: url(../images/bg/beige.png);
         }
+        
         .box3:active {
-            background-image: url(../images/red.png);
+            background-image: url(../images/bg/red.png);
         }
     </style>
 </head>
 
 <body>
     <div class="box1">
-<!--        <div class="box3"></div>-->
+        <!--        <div class="box3"></div>-->
     </div>
 </body>
 

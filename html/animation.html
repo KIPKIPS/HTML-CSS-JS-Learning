@@ -34,12 +34,19 @@
         /* transition-property 指定执行过渡的属性*/
         /* 多属性用,隔开,所有属性用all,必须是一个有效数值向另一个有效数值过渡 */
         /* transition-property: width, height; */
-        transition-property: all;
+        /* transition-property: all; */
         /* transition-duration 指定执行过渡的时间 秒s和毫秒ms*/
-        transition-duration: 3s;
+        /* transition-duration: 3s; */
         /* transition-timing-function 过渡的贝塞尔缓动函数,默认为ease */
-        transition-timing-function: ease-in-out;
-        /* transition-delay */
+        /* transition-timing-function: ease-in-out; */
+        /* transition-timing-function: cubic-bezier(0, 1, 1, -1.5); */
+        /* 分步,第二个参数表示执行的时机,end结束时执行,start表示开始时执行,默认end */
+        /* transition-timing-function: steps(5, end); */
+        /* 过渡效果的延时执行 */
+        /* transition-delay: 2s; */
+        /* transition 可以写多个参数 */
+        /* 属性 缓动时间 延时时间 */
+        transition: margin-left 2s 1s;
     }
     
     .box3 {
