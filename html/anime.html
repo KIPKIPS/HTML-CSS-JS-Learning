@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box1 {
+        width: 800px;
+        height: 800px;
+        background-color: silver;
+        overflow: hidden;
+    }
+    
+    .box1 div {
+        margin-bottom: 100px;
+        width: 100px;
+        height: 100px;
+        /* background-color: #bfa; */
+        /* margin-left: 0px; */
+    }
+    /* animation 和过渡类似,实现动态效果,过渡需要属性变化时触发,animation自动触发 */
+    /* 设置动画效果,必须先设置关键帧,设置动画执行的每一个步骤 */
+    
+    .box2 {
+        margin-left: 50px;
+        background-color: #fff;
+        /*必须有animation-name */
+        animation-name: test;
+        /*animation-duration 动画的持续时间*/
+        animation-duration: 2s;
+        /* 缓动类型 */
+        animation-timing-function: ease;
+        /* 动画执行的次数,迭代iteration */
+        /* animation-iteration-count: 5; */
+        /* infinite 无限执行 */
+        animation-iteration-count: 1;
+        /* 动画的执行方向 */
+        /* normal 从from到to */
+        /* reverse 反向执行 */
+        /* alternate from到to重复时逆向 类似ping pong */
+        /* alternate-reverse alternate的逆向*/
+        animation-direction: alternate;
+        /* 动画执行的状态 */
+        /* running 执行态(默认值) */
+        /* paused 暂停态 */
+        animation-play-state: running;
+        animation-delay: 2s;
+        /* 动画的填充模式 */
+        /* none 动画执行完后元素回到初始位置,默认值 */
+        /* forwards 执行完成后在结束的位置 */
+        /* backwards 动画延时等待时元素会处于开始位置,(元素的颜色为开始颜色orange)*/
+        /* both结合两种,结束时位于结束状态,开始时处于开始状态 */
+        animation-fill-mode: both;
+    }
+    
+    .box3 {
+        border-radius: 50%;
+        background-color: #fff;
+        animation-name: scale;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        transform: scale(1);
+        opacity: 1;
+        animation-iteration-count: infinite;
+    }
+    
+    .box3:hover {
+        animation-play-state: paused;
+    }
+    
+    @keyframes test {
+        /* 动画的开始位置  from == 0%*/
+        from {
+            margin-left: 0;
+            background-color: orange;
+        }
+        /* 动画的结束位置 to == 100%*/
+        to {
+            margin-left: 700px;
+            background-color: red;
+        }
+    }
+    
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(0.7);
+            opacity: 0.5;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    /* .box1:hover div {
+        margin-left: 700px;
+    } */
+</style>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>
