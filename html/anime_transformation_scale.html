@@ -6,10 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>缩放</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            transition: 0.4s;
+            margin: 0 auto;
+            margin-top: 200px;
+            /* 类似锚点 */
+            transform-origin: 0 0;
+        }
+        
+        .box1:hover {
+            /* scaleX scaleY */
+            transform: scale(2);
+        }
+        
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            border: 1px red solid;
+            overflow: hidden;
+        }
+        
+        .wrapper:hover img {
+            transform: scale(1.2);
+        }
+        
+        img {
+            transition: .2s;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="box1"></div>
+    <div class="wrapper">
+        <img src="../images/anime/clock_kawai.jpg" width="100%" height="100%" alt="">
+    </div>
 </body>
 
 </html>
