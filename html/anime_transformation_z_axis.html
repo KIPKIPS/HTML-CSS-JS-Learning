@@ -8,7 +8,11 @@
     <title>Z轴平移</title>
     <style>
         body {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
             background-color: rgb(228, 228, 228);
+            perspective: 800px;
         }
         
         .box1 {
@@ -17,13 +21,14 @@
             background-color: pink;
             margin: 200px auto;
             /* Z轴平移 调整元素在z轴的位置,即元素和人眼之间的距离 */
+            /* 距离越大,离人越近,默认不支持透视,需要手动设置网页的视距 */
+            transition: all 1s;
         }
-        /* .box2 {
-            width: 200px;
-            height: 200px;
-            background-color: orangered;
-            margin: 0 auto;
-        } */
+        
+        body:hover .box1 {
+            transform: translateZ(-200px);
+            background-color: cornflowerblue;
+        }
     </style>
 </head>
 

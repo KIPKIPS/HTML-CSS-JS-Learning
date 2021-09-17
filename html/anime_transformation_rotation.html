@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟表</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            perspective: 800px;
+        }
+        
+        .clock {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            /* border: 10px solid black; */
+            position: relative;
+            background-image: url(../images/anime/clock_white.png);
+            background-size: cover;
+            animation: random_rotate 120s;
+        }
+        
+        @keyframes random_rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+        
+        .clock>div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+        
+        .hour-wapper {
+            height: 70%;
+            width: 70%;
+            animation: rotate 43200s infinite linear;
+        }
+        
+        .hour {
+            height: 60%;
+            width: 6px;
+            background-color: black;
+            margin: 0 auto;
+        }
+        
+        .minute-wapper {
+            height: 80%;
+            width: 80%;
+            animation: rotate 3600s infinite linear;
+        }
+        
+        .minute {
+            height: 60%;
+            width: 4px;
+            background-color: black;
+            margin: 0 auto;
+        }
+        
+        .second-wapper {
+            height: 90%;
+            width: 90%;
+            animation: rotate steps(60) 60s infinite;
+        }
+        
+        .second {
+            height: 60%;
+            width: 2px;
+            background-color: red;
+            margin: 0 auto;
+        }
+        
+        .center {
+            background-color: black;
+            width: 3%;
+            height: 3%;
+            border-radius: 50%;
+        }
+        
+        .second-wapper .center {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="center">
+        </div>
+        <!-- 时针 -->
+        <div class="hour-wapper">
+            <div class="hour"></div>
+        </div>
+        <!-- 分针 -->
+        <div class="minute-wapper">
+            <div class="minute"></div>
+        </div>
+        <!-- 秒针 -->
+        <div class="second-wapper">
+            <div class="second">
+            </div>
+            <div class="center"></div>
+        </div>
+    </div>
+</body>
+
+</html>
