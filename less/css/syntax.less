@@ -2,8 +2,8 @@ body{
     background-color: #bfa;
 }
 .box1{
-    width:500px;
-    height:500px;
+    width:100px;
+    height:100px;
     background-color: red;
     .box2{
         background-color: orange;
@@ -15,6 +15,45 @@ body{
             background-color: cyan;
         }
     }
+    .box5{
+        width:@length;
+        background-color: @color;
+    }
     //单行注释
     
+}
+
+//变量
+// 变量的语法
+@length:500px;
+@color:#bfa;
+// 类名的声明
+@class:box6;
+//类名变量的使用,需要.加@加{类变量名}
+.@{class}{
+    width:@length;
+}
+//总结,直接作为值使用时,@+变量名即可,作为一部分值使用时,必须以@{变量名} 来使用
+
+@imgUrlPrefix:"../../images/shop/";
+.box6{
+    background-image: url("@{imgUrlPrefix}1.jpg");
+    width:@length;
+    height:@length;
+}
+// 变量的重名作用问题,取的是最后一次赋的值
+@colorArea:#bfa;
+@colorArea:orange;
+.box7{
+    width:@length;
+    height:@length;
+    background-color: @colorArea;
+}
+@colorArea:white;
+@colorArea:red;
+
+// 使用$来指定某一属性值为另一属性的值
+div{
+    width: 300px;
+    height: $width;
 }
