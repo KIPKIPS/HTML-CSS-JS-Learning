@@ -1,0 +1,35 @@
+body {
+  background-color: #bfa;
+}
+.box1 .box2 {
+  color: red;
+}
+.box1 .box2:hover {
+  color: white;
+}
+.box1 > .box3 {
+  color: red;
+}
+.box1 > .box3:hover {
+  color: blue;
+}
+.box1:hover {
+  color: orange;
+}
+.p1,
+.p2 {
+  width: 100px;
+  height: 200px;
+}
+.p2 {
+  color: red;
+}
+.p3 {
+  width: 100px;
+  height: 200px;
+}
+.p5 {
+  width: 100px;
+  height: 200px;
+  color: chocolate;
+}

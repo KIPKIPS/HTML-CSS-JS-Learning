@@ -1,0 +1,51 @@
+body{
+    background-color: #bfa;
+}
+.box1{
+    .box2{
+        color:red;
+        &:hover{
+            color:white;
+        }
+    }
+    // 子元素
+    >.box3{
+        color:red;
+        // 这里hover指的是.box3
+        &:hover{
+            color:blue;
+        }
+    }
+    // hover 为box1设置一个hover
+    // &值表示外层的父元素
+    &:hover {
+        color:orange;
+    }
+}
+
+.p1{
+    width: 100px;
+    height: 200px;
+}
+// p2{
+//     width: 100px;
+//     height: 200px;
+//     color:red;
+// }
+// 选择器分组,p2扩展p1,拥有p1的所有属性,并且扩展的添加了自己的独有属性
+.p2:extend(.p1){
+    color:red;
+}
+// 这里指的是p3对p1的样式直接进行引用,相当于复制了P1的样式
+.p3{
+    .p1();
+}
+// 使用类选择器时在后面加上一个(),相当于声明了一个mixins,不会出现在css文件,给其他需要使用的类选择器提供样式
+.p4(){
+    width: 100px;
+    height: 200px;
+    color:chocolate;
+}
+.p5{
+    .p4();
+}
