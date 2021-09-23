@@ -49,3 +49,17 @@ body{
 .p5{
     .p4();
 }
+
+//参数传递,:后面为指定的默认值
+.arg_deliver(@length:100px,@color){
+    width: @length;
+    height: @length;
+    background-color: @color;
+}
+
+div{
+    // 按序传递
+    // .arg_deliver(100px,pink);
+    // 指定值传递
+    .arg_deliver(@color:red,@length:200px)
+}
