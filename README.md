@@ -15,3 +15,14 @@ http://tokyo.kapeli.com/feeds/Unity_3D.tgz
 http://tokyo.kapeli.com/feeds/C.tgz
 http://tokyo.kapeli.com/feeds/NET_Framework.tgz
 http://frankfurt.kapeli.com/feeds/Lua_5.4.tgz
+
+
+### Less import其他文件时,若需要调试,由于网页加载的是css的文件,所以不能准确定位到less文件的代码行数,所以需要一个css和less文件的映射图
+
+Easy Less 插件设置映射的方法,Setting -> Extensions -> Easy Less -> 在settings.json中编辑
+加入如下json代码
+"less.compile": {
+    "compress": false, // true => remove surplus whitespace --是否压缩
+    "sourceMap": true, // true => generate source maps (.css.map files) -- 源码映射表
+    "out": false // false => DON'T output .css files (overridable per-file, see below) 是否生成css文件
+}

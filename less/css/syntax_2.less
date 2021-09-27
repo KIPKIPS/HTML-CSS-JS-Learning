@@ -1,5 +1,5 @@
 body{
-    background-color: #bfa;
+    // background-color: #bfa;
 }
 .box1{
     .box2{
@@ -60,6 +60,19 @@ body{
 div{
     // 按序传递
     // .arg_deliver(100px,pink);
-    // 指定值传递
+    // 指定值传递,可乱序
     .arg_deliver(@color:red,@length:200px)
+}
+span{
+    color:average(red,yellow);
+}
+
+.box7{
+    width: 1024px;
+    height: 1024px;
+    background-color:#bfa;
+}
+.box7:hover{
+    // 颜色加深50%
+    background-color: darken(#bfa,50%);
 }

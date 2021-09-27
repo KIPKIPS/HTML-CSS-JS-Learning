@@ -1,0 +1,44 @@
+body {
+  background-color: #bfa;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box1 .box2 {
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+}
+.box1 .box2 .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+}
+.box1 .box5 {
+  width: 500px;
+  background-color: #bfa;
+}
+.box6 {
+  width: 500px;
+}
+.box6 {
+  background-image: url("../../images/shop/1.jpg");
+  width: 500px;
+  height: 500px;
+}
+.box7 {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+div {
+  width: 300px;
+  height: 300px;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
