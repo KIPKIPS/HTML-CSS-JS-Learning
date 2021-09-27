@@ -22,8 +22,8 @@ Easy Less 插件设置映射的方法,Setting -> Extensions -> Easy Less -> 在s
 
 ```json
 "less.compile": {
-    "compress": false, // true => remove surplus whitespace --是否压缩
-    "sourceMap": true, // true => generate source maps (.css.map files) -- 源码映射表
-    "out": false // false => DON'T output .css files (overridable per-file, see below) 是否生成css文件
+    "compress": false, // true 压缩,移除空格
+    "sourceMap": true, // true 生成less到css的映射表
+    "out": false //true 生成css文件
 }
 ```
