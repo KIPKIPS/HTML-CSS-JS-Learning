@@ -20,10 +20,13 @@ Zeal安装和离线文档的导入教程:http://tokyo.kapeli.com/feeds/JavaScrip
 Easy Less 插件设置映射的方法,Setting -> Extensions -> Easy Less -> 在settings.json中编辑
 加入如下json代码
 
+* **compress** true 压缩,移除空格
+* **compress** true 生成less到css的映射表
+* **compress** true 生成css文件
 ```json
 "less.compile": {
-    "compress": false, // true 压缩,移除空格
-    "sourceMap": true, // true 生成less到css的映射表
-    "out": false //true 生成css文件
+    "compress": false,
+    "sourceMap": true, 
+    "out": false,
 }
 ```
