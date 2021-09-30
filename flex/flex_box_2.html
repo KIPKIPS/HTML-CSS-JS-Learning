@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        ul {
+            width: 800px;
+            border: 1px red solid;
+            /* 设置ui为弹性容器 */
+            display: flex;
+            /* flex-wrap设置元素在弹性容器中是否换行 
+                nowrap:不换行
+                wrap:沿着辅轴换行
+                wrap-reverse元素沿着辅轴反方向换行
+            */
+            flex-wrap: nowrap;
+            /* flex-flow wrap和direction的简写属性,无顺序要求 */
+            /* flex-flow:row wrap ;*/
+            /* justify-content
+                如何分配主轴上的空白空间:(主轴上的元素如何排列)
+                可选值:
+                    flex-start:元素沿着主轴起边排列
+                    flex-end:元素沿着主轴终边排列
+                    center:元素居中排列
+                    space-around:元素分布到两侧
+                    space-between:元素分布到两侧边界
+                    space-evenly元素分布到单侧
+            */
+            justify-content: space-evenly;
+        }
+        
+        li {
+            width: 200px;
+            height: 100px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+        }
+        
+        li:nth-child(1) {
+            background-color: pink;
+        }
+        
+        li:nth-child(2) {
+            background-color: greenyellow;
+        }
+        
+        li:nth-child(3) {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>
