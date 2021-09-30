@@ -14,11 +14,16 @@
         }
         
         ul {
-            width: 800px;
+            width: 200px;
             border: 1px red solid;
             display: flex;
             /* 指定容器元素的排列方式 row(default) column row-reverse column-reverse*/
-            flex-direction: column;
+            flex-direction: row;
+            /* 主轴:弹性元素的排列方向成为主轴
+                    row:主轴:自左向右
+                    column:主轴:自顶向下
+                侧轴:与主轴垂直方向的轴
+            */
         }
         
         li {
@@ -29,14 +34,32 @@
             text-align: center;
             line-height: 100px;
             /* float: left; */
+            /* 弹性元素的属性 
+                父元素有多余的空间时,子元素如何伸展    
+                0:不伸展
+            */
+            /* flex-grow: 1; */
+            /* 各个子元素会按照flex-grow比例分配父元素的剩余空间 */
+            /* flex-shrink:  */
+            /* 各个子元素会按照flex-shrink比例进行收缩,系数越大,收缩约大 */
+        }
+        
+        li:nth-child(1) {
+            background-color: pink;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
         }
         
         li:nth-child(2) {
-            background-color: pink;
+            background-color: greenyellow;
+            /* flex-grow: 2; */
+            flex-shrink: 2;
         }
         
         li:nth-child(3) {
             background-color: orangered;
+            /* flex-grow: 3; */
+            flex-shrink: 3;
         }
     </style>
 </head>
