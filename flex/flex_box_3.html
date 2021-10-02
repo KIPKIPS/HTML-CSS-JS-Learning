@@ -12,7 +12,7 @@
             padding: 0;
             list-style: none;
         }
-        
+
         ul {
             width: 600px;
             height: 800px;
@@ -41,34 +41,53 @@
             */
             align-content: space-between;
         }
-        
+
         li {
             width: 200px;
             background-color: #bfa;
             font-size: 50px;
             text-align: center;
             line-height: 100px;
-            flex-shrink: 0;
+            flex-shrink: 1;
+            /* 元素的基本长度 */
+            /* 如果主轴是横向的 则该值指定的就是元素的宽度
+                如果主轴是纵向的 则该值指定的就是元素的高度
+                默认值是auto 表示参考元素自身的高度或宽度
+                若传递了一个具体的值,则以该值为准
+            */
+            /* flex-basis: 100px; */
+            /* 简写 */
+            /* flex:增长 缩减 基础 */
+            /* 可选值 
+                initial: flex:0 1 auto
+                auto flex:1 1 auto 
+                none flex:0 0 auto 弹性元素没有弹性
+            */
+            flex: 1 1 auto;
         }
-        
+
         li:nth-child(1) {
             background-color: pink;
             /* align-self: 覆盖当前弹性元素上的align-items */
-            align-self: flex-end;
+            /* align-self: flex-end; */
+            /* order可以影响元素的排列顺序 */
+            order: 3;
         }
-        
+
         li:nth-child(2) {
             background-color: greenyellow;
+            order: 2;
         }
-        
+
         li:nth-child(3) {
             background-color: orangered;
+            order: 1;
         }
-        
+
         li:nth-child(4) {
             background-color: blueviolet;
         }
-        
+
         li:nth-child(5) {
             background-color: cyan;
         }
