@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw适配方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            /* 网页中字体大小最小12px,如果小于12px,则自动为12px */
+            /* font-size: 100px; */
+            /* 下方不生效 */
+            /* font-size: 0.13333vw; 扩大100倍*/
+            font-size: 13.333vw;
+        }
+        
+        .box1 {
+            /* 
+                em = 1字体大小
+                rem = 1 html字体大小
+            */
+            /*2 * 100px*/
+            width: 0.48rem;
+            height: 0.35rem;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+    </div>
+</body>
+
+</html>

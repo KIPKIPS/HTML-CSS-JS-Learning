@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_page_practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box1 {
+            width: 100vw;
+            height: 100vh;
+            background-color: #bfa;
+        }
+        
+        .box2 {
+            width: 6.4vw;
+            height: 4.667vw;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 由于不同设备像素比不同,所以同样的375px在不同设备下意义不一样
+        vw v viewport w width,视口宽度
+        vh v viewport h height,视口高度
+
+        100vw 100%视口宽度 1vw 1%视口宽度
+
+        设计图大小 750px
+        100vw = 750px(设计图像素)
+        0.133333vw = 1px
+        48px = 6.4vw
+        35px = 4.667vw
+    -->
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
