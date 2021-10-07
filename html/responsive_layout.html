@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        /* @media
+            使用媒体查询 @media 查询规则{}
+                媒体类型:
+                    all 所有设备
+                    print 打印设备
+                    screen 带屏幕的设备
+                    speech 屏幕阅读器
+        */
+        /* 所有设备使用白色背景 */
+        /* @media all {
+            body {
+                background-color: #fff;
+            }
+        } */
+        /* 打印机或者屏幕设备,使用,连接多种设备 */
+        /* @media print,screen{
+
+        } */
+        /* 表示只有是屏幕是才会应用 */
+        /* @media only screen {
+        } */
+        /* 媒体特性 */
+        /* @media (width:500px) {
+            body {
+                background-color: red;
+            }
+        } */
+        /* @media (min-width:500px) {
+            body {
+                background-color: red;
+            }
+        } */
+        /* 常用断点 
+            超小屏幕 小于768
+            小屏幕 大于768
+            中屏幕 大于992
+            大屏幕 大于1200    
+        */
+        /* 大于500 或者小于800 */
+        /* @media (min-width:800px),
+        ( max-width:500px) {
+            body {
+                background-color: red;
+            }
+        } */
+        /* 500-800之间 */
+        
+        @media (min-width:500px)and ( max-width:800px) {
+            body {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 响应式布局
+        网页可以根据不同的设备或者窗口代销呈现不同的布局
+        响应式布局,可以使一个网页适用于所有设备
+        媒体查询:
+            通过媒体查询可以为不同的设备,或者为设备不同状态设置样式
+
+    -->
+</body>
+
+</html>
