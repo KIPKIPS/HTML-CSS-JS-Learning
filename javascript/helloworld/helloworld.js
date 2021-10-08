@@ -44,19 +44,19 @@ console.log(Boolean(a))
 console.log("--------------");
 //除了空串 都是true
 //string
-var a = "true";
-console.log(Boolean(a))
-var a = "false";
-console.log(Boolean(a))
-var a = "";
-console.log(Boolean(a))
-var a = " ";
-console.log(Boolean(a))
-var a = "asdfsg";
-console.log(Boolean(a))
-var a = "undefined";
-console.log(Boolean(a))
-var a = "NaN";
-console.log(Boolean(a))
-var a = "0";
-console.log(Boolean(a))
+// var a = "true";
+// console.log(Boolean(a))
+// var a = "false";
+// console.log(Boolean(a))
+// var a = "";
+// console.log(Boolean(a))
+// var a = " ";
+// console.log(Boolean(a))
+// var a = "asdfsg";
+// console.log(Boolean(a))
+// var a = "undefined";
+// console.log(Boolean(a))
+// var a = "NaN";
+// console.log(Boolean(a))
+// var a = "0";
+// console.log(Boolean(a))
