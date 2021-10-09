@@ -42,3 +42,5 @@ function sayName() {
 var k3 = new NewPerson("k3");
 var k4 = new NewPerson("k4");
 console.log(k3.sayName == k4.sayName); //false
+
+//上述优化节省了空间,但是却将方法放到了全局作用域,污染了全局作用域的命名空间,使用原型
