@@ -23,5 +23,6 @@ Class.prototype.sayHello = function() {
 //检测c1中是否有sayHello属性
 console.log("sayHello" in c1); //true,因为原型有
 c1.sayHello();
+
 //检测c1 自身 中是否有sayHello属性
 console.log(c1.hasOwnProperty("sayHello")); //false,因为c1没有,即便原型有也为false
