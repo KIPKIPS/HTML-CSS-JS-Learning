@@ -26,3 +26,12 @@ c1.sayHello();
 
 //检测c1 自身 中是否有sayHello属性
 console.log(c1.hasOwnProperty("sayHello")); //false,因为c1没有,即便原型有也为false
+
+function newClass() {
+
+}
+newClass.prototype.test = function() {
+    console.log("test方法");
+}
+var obj = new newClass();
+obj.test();
