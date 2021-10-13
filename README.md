@@ -103,6 +103,8 @@ location.reload(true);
 不会生成历史记录，不能使用回退按钮回退
 
 ### 原型对象和构造函数
-![avatar](/1.png)
+![avatar](./tips/1.png)
 原型对象的prototype属性指向构造器
 构造器的中有一个属性字段可以找到原型对象
+#### 原型对象和构造函数内存图
+![avatar](./tips/2.png)
