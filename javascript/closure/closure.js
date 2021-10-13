@@ -33,12 +33,35 @@ window.onload = function() {
     //产生闭包的条件
     //1.函数嵌套
     //2.内部函数引用了外部函数的变量
+    // function f1() {
+    //     var a = 2;
+
+    //     function f2() {
+    //         console.log(a);
+    //     }
+    // }
+    // f1();
+
+    //常见的闭包
+    //1.将函数作为另一个函数的返回值
     function f1() {
         var a = 2;
 
         function f2() {
+            a++;
             console.log(a);
         }
+        return f2;
     }
-    f1();
+    var f = f1();
+    f(); //3
+    f(); //4
+
+    //2.将函数作为实参给另一个函数调用
+    function showDelay(time, callback) {
+        setTimeout(callback, time);
+    }
+    showDelay(2000, function() {
+        console.log("msg");
+    });
 }
