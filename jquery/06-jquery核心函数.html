@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>06-Jquery核心函数</title>
+
+    <script>
+        //$(); 代表jquery的核心函数
+        //1.接收函数
+        $(function() {
+            console.log(3);
+            //2.接收字符串
+            //2.1接收字符串选择器
+            var box1 = $(".box1");
+            console.log(box1);
+
+            //2.2接收代码片段
+            var p = $("<p>段落</p>");
+            console.log(p);
+            box1.append(p);
+            //3.接收dom元素
+            var span = document.getElementsByTagName("span")[0];
+            var sppnJQ = $(span); //包装成jquery对象
+            console.log(span)
+            console.log(sppnJQ);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <span>span</span>
+</body>
+
+</html>

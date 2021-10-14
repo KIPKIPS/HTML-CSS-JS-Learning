@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>Jquery和JS入口函数</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        //jquery的固定写法
+        //原生js和jquery加载模式不同,原始js会等待dom元素和图片加载完成之后执行
+        //jquery会等待dom元素,但是不会等待图片
+        // $(document).ready(function() {
+        //     var img = $("img")[0];
+        //     console.log(img);
+        //     var width = img.width;
+        //     console.log(width);
+        // });
+        //原生js多个入口函数后者会覆盖前者
+        //只会弹出2
+        // window.onload = function() {
+        //     alert(1);
+        // };
+        // window.onload = function() {
+        //     alert(2);
+        // };
+        //jquery不会进行覆盖,每个入口函数按序执行
+        // $(document).ready(function() {
+        //     alert(1);
+        // });
+        // $(document).ready(function() {
+        //     alert(2);
+        // });
+    </script>
+
+</head>
+
+<body>
+    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
+
+</body>
+
+</html>

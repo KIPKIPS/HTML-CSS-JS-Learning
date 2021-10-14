@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="./conflictModule.js"></script>
+    <title>05-Jquery冲突问题</title>
+
+    <script>
+        // 由于conflictModule.js复写了$的值,又在jquery之后引入,所以以下函数不执行
+        // $(function() {
+        //     console.log(2)
+        // });
+
+        // jQuery(function() {
+        //     console.log(2)
+        // });
+
+        //解决方法,释放jquery的$使用权
+        //在jquery代码之前执行,之后不能再使用$,需要使用jQuery
+        // jQuery.noConflict();
+        // jQuery(function() {
+        //     console.log(2);
+        // });
+
+        //自定义访问符号
+        var kips = jQuery.noConflict();
+        kips(function() {
+            alert(this);
+        });
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
