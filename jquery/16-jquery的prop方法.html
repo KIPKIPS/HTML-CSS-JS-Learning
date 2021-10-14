@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>16-jquery的prop方法</title>
+    <style>
+
+    </style>
+    <script>
+        $(function() {
+            //eq(0)代表找的元素中第0个元素
+            //两个参数,无则新增,有则修改
+            $("span").eq(0).prop("demo", "666");
+
+            //一个参数 获取
+            console.log($("span").eq(0).prop("demo"));
+
+            //移除
+            // var value = $("span").eq(0).removeProp("demo");
+            // console.log($("span").eq(0).prop("demo"));
+            //操作属性节点
+            //将找到的所有元素的class属性节点设置为box
+            $("span").prop("class", "box");
+
+            //
+            console.log($("#i1").prop("checked")); //true
+            console.log($("#i1").attr("checked")); //checked
+
+            console.log($("#i2").prop("checked")); //false
+            console.log($("#i2").attr("checked")); //undefined
+        });
+    </script>
+
+</head>
+
+<body>
+    <span class="c1" name="n1"></span>
+    <span class="c2" name="n2"></span>
+
+    <input id="i1" type="checkbox" checked>
+    <input id="i2" type="checkbox">
+</body>
+
+</html>

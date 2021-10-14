@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>15-jquery的attr方法</title>
+    <style>
+
+    </style>
+    <script>
+        $(function() {
+            //获取属性节点的值
+            var spans = $("span");
+            //一个参数为获取值,但是只获取第一个元素的class
+            console.log(spans.attr("class"));
+            //两个参数为设置值,将所有元素的属性值设置为第二个参数
+            spans.attr("class", "newclass");
+            //设置不存在的属性节点值,则会新增nonexit属性的值
+            spans.attr("nonexit", "xx");
+
+            //删除属性节点
+            //全部元素指定的属性节点都被删除
+            spans.removeAttr("nonexit");
+            //删除多个属性节点
+            spans.removeAttr("nonexit name class");
+        });
+    </script>
+
+</head>
+
+<body>
+    <span class="c1" name="n1"></span>
+    <span class="c2" name="n2"></span>
+</body>
+
+</html>
