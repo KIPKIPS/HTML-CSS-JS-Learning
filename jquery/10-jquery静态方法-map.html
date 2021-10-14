@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>10-jquery静态方法-map</title>
+
+    <script>
+        $(function() {
+            //原生js遍历
+            var arr = [1, 2, 4, 5, 6];
+            // arr.map(function(value, index, arr) {
+            //     console.log("索引:" + index + "值:" + value + "数组:" + arr);
+            // });
+            //伪数组,原生js map无法遍历伪数组
+            var obj = {
+                0: 1,
+                1: 2,
+                2: 2,
+                3: 3,
+                4: 8,
+                length: 5,
+            };
+
+            // 遍历数组
+            var foreach = $.each(obj, function(index, value) {
+                console.log("索引:" + index + "值:" + value);
+
+            });
+            console.log(foreach);
+            //map遍历伪数组
+            var formap = $.map(obj, function(value, index) {
+                let str = "索引:" + index + "值:" + value;
+                console.log(str);
+                if (index > 2) {
+                    return str
+                }
+            });
+            console.log(formap);
+            //jquery map 和 each的区别
+            //each遍历谁返回谁
+            //map默认返回空数组,若是迭代函数有返回值,使用返回值填充
+        });
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

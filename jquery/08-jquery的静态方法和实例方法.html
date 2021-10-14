@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>08-jquery的静态方法和实例方法</title>
+
+    <script>
+        $(function() {
+            function AClass() {
+
+            }
+            //类名.静态方法名声明静态方法
+            AClass.staticFunc = function() {
+                console.log("staticFunc");
+            };
+            //类名加方法名调用静态方法
+            AClass.staticFunc();
+            //类名.prototype.方法名声明实例方法
+            AClass.prototype.entityFunc = function() {
+                console.log("entityFunc");
+            };
+            var a = new AClass()
+            a.entityFunc();
+        });
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

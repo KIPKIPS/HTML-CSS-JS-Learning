@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>11-jquery其他静态方法</title>
+
+    <script>
+        $(function() {
+            //trim 去除空格
+            console.log("trim-------------------------");
+            var str = "   fsd   ";
+            console.log($.trim(str));
+            //isWindow 对象是否为window
+            console.log("isWindow-------------------------");
+            var arr = [];
+            var obj = {};
+            console.log($.isWindow(arr));
+            console.log($.isWindow(window));
+            console.log($.isWindow(obj));
+            //isArray 真数组true
+            console.log("isArray-------------------------");
+            console.log($.isArray(obj));
+            console.log($.isArray(arr));
+            //isFunction 是否是function
+            console.log("isFunction-------------------------");
+            var fn = function() {};
+
+            function func() {};
+            console.log($.isFunction(fn));
+            console.log($.isFunction(func));
+            console.log($.isFunction(arr));
+        });
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

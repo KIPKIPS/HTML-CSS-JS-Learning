@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>09-jquery静态方法-each</title>
+
+    <script>
+        $(function() {
+            //原生js遍历
+            var arr = [1, 2, 4, 5, 6];
+            // arr.forEach(function(value, index, arr) {
+            //     console.log(value);
+            // });
+            //伪数组,原生js无法遍历伪数组
+            var obj = {
+                0: 1,
+                1: 2,
+                2: 2,
+                3: 3,
+                4: 8,
+                length: 5,
+            };
+            // 遍历数组
+            // $.each(arr, function(index, value) {
+            //     console.log("索引:" + index + "值:" + value);
+            // });
+            //遍历伪数组
+            $.each(obj, function(index, value) {
+                console.log("索引:" + index + "值:" + value);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

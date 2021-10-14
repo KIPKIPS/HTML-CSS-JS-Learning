@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>12-jquery静态方法-holdReady</title>
+
+    <script>
+        // $(function() {
+        //     var btn = $("button")[0];
+        //     btn.onclick = function() {
+        //         alert("btn");
+        //     };
+        // });
+        window.onload = function() {
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function() {
+                $.holdReady(false);
+            };
+        };
+        //暂停ready函数
+        $.holdReady(true);
+        $(document).ready(function() {
+            alert("ready");
+        });
+    </script>
+
+</head>
+
+<body>
+    <button>回复ready事件</button>
+</body>
+
+</html>
